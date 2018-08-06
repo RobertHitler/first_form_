@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* CSS Document */
+
+header{
+	width: 100%;
+	height: 50px;
+	background-color:#323B3D;
+	color: aliceblue;
+	text-align: center;
+}
+
+.sec1{
+	width: 80%;
+	height: 280px;
+	box-shadow: 10px 10px 2px 4px grey;
+	margin-left: 10%;
+	background-color: aliceblue;
+}
+
+.sec2{
+	width: 80%;
+	height: 280px;
+	margin-left: 10%;
+	
+}
+
+.sec3{
+	width: 80%;
+	height: 600px;
+	margin-left: 10%;
+	background-color: aliceblue;
+	box-shadow: 10px 10px 2px 4px grey;
+}
+.persn{
+	width:30%;
+	height:180px;
+	float: left;
+	margin-top: 38px;
+	text-align: center
+	
+	
+}
+
+hr{
+	border: 1px;
+	border-bottom:1px solid #EDDDDD;
+	
+}
+
+
+.gen{
+	width:30%;
+	float: left;
+	text-align: center;
+
+}
+
+.dob{
+	width:30%;
+	float: left;
+	text-align: center;
+	
+}
+
+.info{
+	width: 60%;
+	
+	
+	
+}
+
+.emob{
+	width: 35%;
+	margin-left: 5%;
+}
+
+.info, .emob{
+	background-color:#C4CFD7;
+	text-align: center;
+	height: 150px;
+	float: left;
+	box-shadow: 10px 10px 2px 5px darkgrey; 
+}
+
+
+
+.txt_area{
+	width: 80%;
+	margin-left: 10%;
+	height: 320px;
+	padding-left: 10%;
+	padding-bottom: 30px;
+	
+	
+	
+}
+
+.portfl{
+	width: 80%;
+	height: 200px;
+	margin-left: 10%;
+	padding-left: 10%;
+	
+	
+}
+
+.space{
+	width: 100%;
+	height: 100px;
+}
+
+.submt{
+	width: 40%;
+	margin-left: 30%;
+	margin-right: 30%;
+	text-align: center;
+	
+	
+}
+

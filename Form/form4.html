@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form4</title>
+<link rel="stylesheet" type="text/css" href="form_3.css">
+</head>
+
+<body>
+	<header>
+		<div>
+			<h1>Form</h1>
+		</div>
+	</header>
+<div class="space"></div>
+	<section class="sec">
+		<form name="my_form" onSubmit="return (validateForm() && emailID() && Mobil() && date())" method="post">
+		  <div class="main_1">
+				<div class="name_form">
+					<fieldset><legend>Full Name</legend>
+					First Name:<br/>
+					<input type="text" name="myname"><br/>
+			
+					Middle Name:<br>
+					<input type="text" name="midlname">
+					<br/>
+					Last Name:<br/>
+					<input type="text" name="lstname" >
+					<br>
+					<br>
+					</fieldset>
+				</div>
+				<div class="gender_form">
+					Gender:<br/><hr/>
+					<input type="radio" name="gender" value="1" unchecked>  Male<br/><br>
+					<input type="radio" name="gender" value="2">Female<br/><br>
+					<input type="radio" name="gender" value="3">Others<br/><br>
+					<br/>
+					<br><br/>
+					<script>
+						function validateForm() {
+    						var x = document.forms["my_form"]["myname"].value;//var for firstname
+							var y = document.forms["my_form"]["midlname"].value;//var for middle name
+							var z = document.forms["my_form"]["lstname"].value;// var for lastname
+		
+							var radios = document.getElementsByName("gender");// var for gender radio button option
+							var formValid = false;
+							
+							//if conditon to validate firstname 
+    						if (x == "") {
+						        alert("Name must be filled out");
+    						    return false;
+    						}
+							//if conditon to validate middlename
+							if (y == ""){
+								alert("NAME MUST BE FILLED OUT");
+								return false;
+								
+							}
+							//if conditon to validate lastname
+							if (z == ""){
+								alert("name must be filled");
+								return false;
+							}
+							
+							//condition to validate radio button checked or not
+							var i = 0;
+							while (!formValid && i < radios.length) {
+								if (radios[i].checked) formValid = true;
+								i++;
+							}
+							
+							if (!formValid) alert("please select your gender");
+								return formValid;
+							
+						}
+						
+						/*function gendrForm() {
+							var radios = document.getElementsByName("gender");
+							var formValid = false;
+
+							var i = 0;
+							while (!formValid && i < radios.length) {
+								if (radios[i].checked) formValid = true;
+								i++;
+							}
+							
+							if (!formValid) alert("please select your gender");
+								return formValid;
+						}*/
+						
+						function date() {
+       						var DDD = document.getElementById("DOB");// var for getting day value
+							var MMM = document.getElementById("MOB");//var for getting month value
+							var yyy = document.getElementById("YOB");//var for gtting year value
+							var a = document.forms["my_form"]["about_you"].value;
+							var nme = document.forms["my_form"]["myfile"].value;
+							var urlChk = document.forms["my_form"]["myurl"].value;
+							var urlPat = /^(http(s)?:\/\/)?(www)?[a-zA-Z0-9@:%.\/_\-+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&\/\/=]*)$/;
+							
+							//to validate whether day selected or not
+							if (DDD.value == "0") {
+							//If the "Day" option is not selected display alert .
+								alert("Please select a day!");
+								return false;
+							}
+							
+							//to validate whether month selected or not
+							if (MMM.value == "0"){
+								//If the "month" option is not selected display alert .
+								alert("Please select a month!");
+								return false;
+							}
+							
+							//to validate whether year selected or not
+							if (yyy.value == "0"){
+								//If the "year" option is not selected display alert .
+								alert("Please select a year!");
+								return false;
+							}
+							
+							if (a == "") {
+						        alert("about you must be filled out");
+    						    return false;
+    						}
+							
+							if (a.length <=20 || a.length>=100){
+								alert("Text must not be more than 20 char and less than 100 char");
+								return false;
+							}
+							
+							if (nme == 0){
+								alert("please select a file");
+								return false;
+							}
+							
+							if (urlChk == ""){
+								alert("fill in URL");
+								return false;
+							}
+							
+							if (urlPat.test(urlChk) == false){
+								alert("please enter valid url");
+								return false;
+							}
+						}
+						
+						function Mobil(){
+							var phon = document.forms["my_form"]["mobi"].value;
+							var phonePat = /^[789][0-9]{9}$/;
+							
+							var adr = document.forms["my_form"]["address"].value;// var for address
+							var fileUp =document.forms["my_form"]["myfile"].value;
+							
+							/*var ext = document.forms["my_form"]["myfile"].value;
+							var exten =[".jpg", ".jpeg", ".bmp", ".gif", ".png"];*/
+							
+							if(phon==""){
+								alert("Enter the contact number");
+								return false;
+							}
+							
+							
+							if(phonePat.test(phon) == false){
+							    alert("Entered Invalid number");
+								return false;
+							   }
+							
+							if (adr==""){
+								alert("Address must be filled");
+								return false;
+
+							}
+							return true;
+							
+						}
+						
+						
+						function emailID(){
+							var chemail = document.forms["my_form"]["email"];
+							var emailPat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+							
+							
+							if (chemail.value == ""){
+								alert ("Email id must be filled");
+								return false;
+							}
+							
+							if (emailPat.test(chemail.value) == false ){
+								alert("please type valid email id");
+								return false;
+								}
+							return true;
+						}
+						
+						
+					</script>
+				</div>
+				<div class="dob_form" id="DOOB">
+					D.O.B:<br/><hr/>
+					<div class="date">
+						Day:<br/>
+						<select id="DOB">
+							<option value="0">Day</option>
+							<option value="01">01</option>
+							<option value="03">03</option>
+							<option value="07">07</option>
+							<option value="27">27</option>
+						</select>
+					</div>
+			
+					<div class="date">
+						Month:<br/>
+						<select id="MOB">
+							<option value="0">Month</option>
+							<option value="01">january</option>
+							<option value="02">Febrauary</option>
+							<option value="03">March</option>
+							<option value="04">April</option>
+						</select>
+					</div>
+					<div class="date">
+						Year:<br/>
+						<select id="YOB" name="yob">
+							<option value="0">Year</option>
+							<option value="1990">1990</option>
+							<option value="2000">2000</option>
+							<option value="2010">2010</option>
+							<option value="2018">2018</option>
+						</select>
+					</div>
+				</div>
+				<script>
+					
+				</script>
+			</div>
+		  <div class="space"></div>
+			<div class="main_2">
+				<div class="adrs">
+					Address:<br><hr>
+					<textarea id="txt_adrs" onClick="colr1()" name="address" ></textarea>
+					
+				</div>
+				<div class="emob">
+					<br/><hr/>
+					email-Id:
+					<input type="text" name="email" ><br/> <br/>
+					Mobile no:
+					<input type="text" name="mobi" >
+				</div>
+			</div>
+	  		<div class="space"></div>
+	  	  <div class="main_3">
+		  		<div class="txt_area">
+		  			<fieldset>
+				<legend><i>Write briefly about your self</i></legend><br><br>
+				<textarea name="about_you" id="clro" onClick="colr()" style="width: 90%;height: 300px;" ></textarea>
+				</fieldset>
+		  		</div>
+		  		<div class="portfl">
+				<fieldset style="width: 90%;">
+					<legend>Upload your portfolio here</legend><br><br>
+					Select a file:<input type="file" name="myfile" onClick="Mobil">
+					<br><br><hr><br/>
+					put your Portfolio URL here:<input type="text" name="myurl">
+				</fieldset>
+					<div class="submt">
+						<input type="submit" value="submit" style="font-size: 28px;">
+					</div>
+				</div>
+			</div> 
+		</form>
+	</section>
+<div class="space1"></div>
+	
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form3</title>
+<link rel="stylesheet" type="text/css" href="form_3.css">
+</head>
+
+<body>
+	<header>
+		<div>
+			<h1>Form</h1>
+		</div>
+	</header>
+<div class="space"></div>
+	<section class="sec">
+		<form name="my_form" id="my_Form" onSubmit="return function()" method="post">
+		  <div class="main_1">
+				<div class="name_form">
+					<fieldset><legend>Full Name</legend>
+					First Name:<br/>
+					<input type="text" id="fstname" name="fstname"><br/>
+			
+					Middle Name:<br>
+					<input type="text" id="mdlname" name="mdlname">
+					<br/>
+					Last Name:<br/>
+					<input type="text" id="lstname" name="lstname">
+					<br>
+					<br>
+					</fieldset>
+				</div>
+				<div class="gender_form">
+					Gender:<br/><hr/>
+					<input type="radio" class="gendr" name="gender" value="male" unchecked>  Male<br/><br>
+					<input type="radio" class="gendr" name="gender" value="female">Female<br/><br>
+					<input type="radio" class="gendr" name="gender" value="other">Others<br/><br>
+					<br/>
+					<br><br/>
+				</div>
+				<div class="dob_form" id="DOOB">
+					D.O.B:<br/><hr/>
+					<div class="date">
+						Day:<br/>
+						<select id="DOB">
+							<option value="0">Day</option>
+							<option value="01">01</option>
+							<option value="03">03</option>
+							<option value="07">07</option>
+							<option value="27">27</option>
+						</select>
+					</div>
+			
+					<div class="date">
+						Month:<br/>
+						<select id="MOB">
+							<option value="0">Month</option>
+							<option value="01">january</option>
+							<option value="02">Febrauary</option>
+							<option value="03">March</option>
+							<option value="04">April</option>
+						</select>
+					</div>
+					<div class="date">
+						Year:<br/>
+						<select id="YOB" name="yob">
+							<option value="0">Year</option>
+							<option value="1990">1990</option>
+							<option value="2000">2000</option>
+							<option value="2010">2010</option>
+							<option value="2018">2018</option>
+						</select>
+					</div>
+				</div>
+				<script>
+					
+				</script>
+			</div>
+		  <div class="space"></div>
+			<div class="main_2">
+				<div class="adrs">
+					Address:<br><hr>
+					<textarea id="txt_adrs" onClick="colr1()" name="address"></textarea>
+					<!--<input type="text" name="address"  required>
+					street:<input type="text" name="address"  required>
+					area:<input type="text" name="address"  required><br/><br>
+					city:<input type="text" name="address"  required>
+					state:<input type="text" name="address"  required>
+					pincode:<input type="text" name="address"  required>-->
+					
+				</div>
+				<div class="emob">
+					<br/><hr/>
+					email-Id:
+					<input type="text" id="email" name="email"><br/> <br/>
+					Mobile no:
+					<input type="text" id="mobile" name="mobile">
+				</div>
+			</div>
+	  		<div class="space"></div>
+	  	  <div class="main_3">
+		  		<div class="txt_area">
+		  			<fieldset>
+				<legend><i>Write briefly about your self</i></legend><br><br>
+				<textarea name="about_you" id="clro" onClick="colr()" style="width: 90%;height: 300px;"></textarea>
+				</fieldset>
+		  		</div>
+		  		<div class="portfl">
+				<fieldset style="width: 90%;">
+					<legend>Upload your portfolio here</legend><br><br>
+					Select a file:<input type="file" id="File" name="myfile">
+					<br><br><hr><br/>
+					put your Portfolio URL here:<input type="text" id="URL" name="myurl">
+				</fieldset>
+					<div class="submt">
+						<input type="submit" id="submit" value="submit" style="font-size: 28px;">
+					</div>
+				</div>
+			</div> 
+		</form>
+	</section>
+<div class="space1"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="form-3.js"></script>	
+</body>
+</html>

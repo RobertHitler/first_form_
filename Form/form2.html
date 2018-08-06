@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>form</title>
+<link rel="stylesheet" href="form.css" type="text/css">
+</head>
+
+<body>
+
+<header>
+	<div>
+		<h1>Form</h1>
+	</div>
+</header>
+<div class="space"></div>
+<section class="sec1">
+  <div class="persn">
+		<form name="myform_1" onSubmit="return myfunction()" method="post"><fieldset>
+	        <legend>Full Name</legend>
+			First Name:<br/>
+			<input type="text" name="myname" required><br/>
+			
+			Middle Name:<br>
+			<input type="text" name="myname1" >
+			<br/>
+			Last Name:<br/>
+			<input type="text" name="myname2">
+			<br>
+			<br>
+			</fieldset>
+		</form>
+		
+		<script>
+	  	function myfunction(){
+			var x = document.forms["myform_1"]["myname"].value;
+			if (x == " "){
+				alert("Name must be filled");
+				return false;
+			}
+		}
+	  </script>
+	</div>
+	<br/>
+	<br/>
+	
+	<div class="gen">
+		<form>
+		Gender:<br/><hr/>
+			<input type="radio" name="gender" value="male" unchecked>  Male<br/><br>
+			<input type="radio" name="gender" value="female">Female<br/><br>
+			<input type="radio" name="gender" value="others">Others<br/><br>
+			<br/>
+			<br><br/>
+		</form>
+		
+	</div>
+			
+	<div class="dob">
+	<form>
+		D.O.B:<br/><hr/>
+		<div class="date">
+			Day:<br/>
+			<select>
+				<option value="01">01</option>
+				<option value="03">03</option>
+				<option value="07">07</option>
+				<option value="27">27</option>
+			</select>
+		</div>
+			
+		<div class="date">
+			Month:<br/>
+			<select>
+				<option value="january">january</option>
+				<option value="february">Febrauary</option>
+				<option value="march">March</option>
+				<option value="april">April</option>
+			</select>
+		</div>
+		<div class="date">
+			Year:<br/>
+			<select>
+				<option value="1990">1990</option>
+				<option value="2000">2000</option>
+				<option value="2010">2010</option>
+				<option value="2018">2018</option>
+			</select>
+		</div>
+	</form>
+	</div>
+</section>
+<br/><hr>
+
+<div class="space"></div>
+<section class="sec2">
+	<div class="info">
+		<form>
+		Address:<br><hr>
+			<input type="text" name="address" value="house no." >
+			<input type="text" name="address" value="street" >
+			<input type="text" name="address" value="area" ><br/><br>
+			<input type="text" name="address" value="city" >
+			<input type="text" name="address" value="state" >
+			<input type="text" name="address" value="pin code" >
+		</form>
+	</div >
+  <strong><div class="emob">
+	  <form><br/><hr/>
+		email-Id:
+        <input type="email" name="email" value="" ><br/> <br/>
+		Mobile no:
+			<input type="text" name="mobile" value="" >
+		</form>
+	</div></strong>
+	</section>
+	
+	<section class="sec3">
+		<div class="txt_area"><br>
+		     <i>Write briefly about your self</i>
+			<form>
+				<textarea name="about you" style="width: 80%;height: 300px;"></textarea>
+			</form>
+		</div><hr><br>
+		<div class="portfl">
+			<form>
+				<fieldset style="width: 77%;">
+					<legend>Upload your portfolio here</legend><br><br>
+					Select a file:<input type="file" name="myfile" >
+					<br><br><hr><br/>
+					put your URL here:<input type="url" name="myurl">
+				</fieldset>
+			</form>
+		</div>
+	</section>
+	<div class="space"></div>
+	<div class="submt">
+		<form name="myform_1" onSubmit="return myfunction()" method="post">
+			<input type="submit" value="submit" style="font-size: 28px;">
+		</form>
+	</div>
+	<div class="space"></div>
+</body>
+</html>
